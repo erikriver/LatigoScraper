@@ -55,13 +55,20 @@ class Account:
 
 
 class Transaction:
-    def __init__(self, tr_date, tr_desc, tr_amount):
-        self.tr_date = tr_date
+    def __init__(self, tr_date_in, tr_date_op, tr_desc, tr_amount):
+        """
+        tr_date_in: Date creation
+        tr_date_op: Date operation
+        """
+        self.tr_date_in = tr_date_in
+        self.tr_date_op = tr_date_op
         self.tr_desc = tr_desc
         self.tr_amount = tr_amount
 
-        if type(tr_date) is not datetime.datetime:
-            raise TypeError('tr_date should be datetime.datetime')
+        if type(tr_date_in) is not datetime.datetime:
+            raise TypeError('tr_date_in should be datetime.datetime')
+        if type(tr_date_op) is not datetime.datetime:
+            raise TypeError('tr_date_op should be datetime.datetime')
         if type(tr_desc) is not str:
             raise TypeError('tr_desc should be string')
         if type(tr_amount) is not float:
