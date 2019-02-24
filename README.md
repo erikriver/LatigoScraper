@@ -6,6 +6,13 @@ Los bancos soportados hasta el momento:
 * HSBC
 * Banregio (En desarrollo)
 
+## Instalación
+```bash
+$ python3 -m venv venv
+$ source venv/bin/activate
+$ pip install -r requirements.txt
+```
+
 ## Uso
 ```python
 import latigoscraper
